@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wj3-pU-gPz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="S6g-Z4-8dW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHl-qQ-CR4" userLabel="timeLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
+                                                <color key="backgroundColor" red="0.077577464282512665" green="0.13723364472389221" blue="0.80988460779190063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wLX-4g-41u">
+                                        <rect key="frame" x="0.0" y="247" width="375" height="400"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJ0-ri-5kQ" userLabel="playBtn">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="400"/>
+                                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="开始"/>
+                                                <connections>
+                                                    <action selector="playButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IXN-7I-X9I"/>
+                                                    <action selector="playButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchDown" id="pkm-bL-9S4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y42-gJ-etH" userLabel="pauseBtn">
+                                                <rect key="frame" x="125" y="0.0" width="125" height="400"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="暂停"/>
+                                                <connections>
+                                                    <action selector="pauseButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d7l-ZE-U3K"/>
+                                                    <action selector="pauseButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchDown" id="fT9-w6-yWG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bN-Kc-oXA" userLabel="resetBtn">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="400"/>
+                                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="清零"/>
+                                                <connections>
+                                                    <action selector="resetButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aIn-7E-dIF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="S6g-Z4-8dW" secondAttribute="bottom" constant="400" id="5Mr-j1-T9w"/>
+                                    <constraint firstItem="S6g-Z4-8dW" firstAttribute="top" secondItem="Wj3-pU-gPz" secondAttribute="top" id="AGt-hr-GxE"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wj3-pU-gPz" secondAttribute="trailing" id="8hN-Wd-NLM"/>
+                            <constraint firstItem="Wj3-pU-gPz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Qr-MN-Hzl"/>
+                            <constraint firstItem="Wj3-pU-gPz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NFh-f2-01t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wj3-pU-gPz" secondAttribute="bottom" id="dXK-1j-I9z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pauseBtn" destination="Y42-gJ-etH" id="oqa-r0-w4Z"/>
+                        <outlet property="playBtn" destination="SJ0-ri-5kQ" id="y9c-Ld-LL4"/>
+                        <outlet property="resetBtn" destination="7bN-Kc-oXA" id="yIR-v4-Ddv"/>
+                        <outlet property="timeLabel" destination="SHl-qQ-CR4" id="kD7-Wq-qHd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
