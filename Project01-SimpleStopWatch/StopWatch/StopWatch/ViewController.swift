@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timeLabel.text = String(counter)
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
     @IBOutlet weak var timeLabel: UILabel!
